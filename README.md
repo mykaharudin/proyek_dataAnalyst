@@ -1,6 +1,6 @@
 ## Project Data Analytics
 Repositori yang berupa projek analis data ,yang dibuat dengan menggunakan **Streamlit** <img src="https://user-images.githubusercontent.com/7164864/217935870-c0bc60a3-6fc0-4047-b011-7b4c59488c91.png" alt="Streamlit logo"></img>
-**Python** <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3APython-logo-notext.svg&psig=AOvVaw0lUjGNHMGKZ8Xs9ZjLiT1P&ust=1700562375848000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCPjfxNGu0oIDFQAAAAAdAAAAABAE" alt="Python logo"></img>
+**Python** <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Python-Dark.svg" alt="Python logo"></img>
 
 ## Deskripsi
 Proyek ini merupakan analisis data E-Commerce**E-Commerce Data Analysis**yang divisualisasikan melalui sebuah situs web di platform Kaggle. Tujuannya adalah memberikan wawasan dan pemahaman tentang informasi yang terdapat dalam data E-Commerce tersebut.
