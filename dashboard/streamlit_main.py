@@ -4,7 +4,7 @@ import matplotlib.image as mpimg
 import seaborn as sns
 import streamlit as st
 import urllib
-from func import DataAnalyzer, BrazilMapPlotter
+from funcMain import DataAnalyzer, BrazilMapPlotter
 
 sns.set(style='dark')
 st.set_option('deprecation.showPyplotGlobalUse', False)
@@ -31,8 +31,7 @@ with st.sidebar:
     with col1:
         st.write(' ')
     with col2:
-        st.image("logo.png"
-                 , width=100)
+        st.image("./313.jpg", width=100)
     with col3:
         st.write(' ')
 
@@ -46,7 +45,7 @@ with st.sidebar:
 
 # Main
 main_df = all_df[(all_df["order_approved_at"] >= str(start_date)) & 
-                 (all_df["order_approved_at"] <= str(end_date))]
+                (all_df["order_approved_at"] <= str(end_date))]
 
 function = DataAnalyzer(main_df)
 map_plot = BrazilMapPlotter(data, plt, mpimg, urllib, st)
@@ -204,6 +203,6 @@ with tab2:
     map_plot.plot()
 
     with st.expander("See Explanation"):
-        st.write('According to the graph that has been created, there are more customers in the southeast and south. Other information, there are more customers in cities that are capitals (São Paulo, Rio de Janeiro, Porto Alegre, and others).')
+        st.write('According to the graph that has been created, there are more customers in the southeast and south. Other information, there are more customers in cities that are capitals (São Paulo, Porto Alegre, and others).')
 
-st.caption('Copyright (C) Mayuka 2023')
+st.caption('Copyright(C) Mayuka 2023')
