@@ -37,14 +37,8 @@ Kaggle Dataset Ecommerce [(Link Download)](https://www.kaggle.com/datasets/olist
 1. Melakukan Akses dan Kompilasi(Local):
 
     ```shell
-    cd streamlit
-    streamlit run main.py
+    cd proyek_dataAnalyst
+    streamlit run dashboard/dashboardme.py
     ```
 2. Melakukan Akses secara Cloud (online):
    [Project Data Analytics](https://proyekdataanalyst-mayuka.streamlit.app/)
-
-
-
-
-
-   
