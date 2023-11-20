@@ -1,4 +1,3 @@
-import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
@@ -7,21 +6,18 @@ import streamlit as st
 import urllib
 from funcMain import AnalisisData, BrazilMapPlotter
 
-current_directory = os.getcwd()
-
 sns.set(style='dark')
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # Dataset
-datetime_cols = ["order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date", "order_estimated_delivery_date", "order_purchase_timestamp", "shipping_limit_date"]
-# all_df = pd.read_csv(current_directory, 'dashboard', 'df.csv')
-file_path = os.path.join(current_directory, 'dashboard', 'df.csv')
-all_df = pd.read_csv(file_path)
+all_df = pd.read_csv('https://github.com/mykaharudin/proyek_dataAnalyst/raw/main/dashboard/df.csv')
 all_df.sort_values(by="order_approved_at", inplace=True)
 all_df.reset_index(inplace=True)
 
+datetime_cols = ["order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date", "order_estimated_delivery_date", "order_purchase_timestamp", "shipping_limit_date"]
+
 # Geolocation Dataset
-geolocation = pd.read_csv('geolocation.csv')
+geolocation = pd.read_csv('https://github.com/mykaharudin/proyek_dataAnalyst/raw/main/dashboard/geolocation.csv')
 data = geolocation.drop_duplicates(subset='customer_unique_id')
 
 for col in datetime_cols:
@@ -36,7 +32,7 @@ with st.sidebar:
     with col1:
         st.write(' ')
     with col2:
-        st.image("./313.jpg", width=100)
+        st.image('https://github.com/mykaharudin/proyek_dataAnalyst/raw/main/dashboard/df.csv', width=100)
     with col3:
         st.write(' ')
 
@@ -52,7 +48,7 @@ with st.sidebar:
 main_df = all_df[(all_df["order_approved_at"] >= str(start_date)) & 
                 (all_df["order_approved_at"] <= str(end_date))]
 
-function = DataAnalyzer(main_df)
+function = AnalisisData(main_df)
 map_plot = BrazilMapPlotter(data, plt, mpimg, urllib, st)
 
 daily_orders_df = function.create_daily_orders_df()
