@@ -1,0 +1,7 @@
+Python3 v10.1
+numpy
+pandas
+matplotlib
+scipy
+streamlit
+seaborn
