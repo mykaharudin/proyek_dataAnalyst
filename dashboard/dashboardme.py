@@ -20,8 +20,8 @@ datetime_cols = ["order_approved_at", "order_delivered_carrier_date", "order_del
 geolocation = pd.read_csv('https://github.com/mykaharudin/proyek_dataAnalyst/raw/main/dashboard/geolocation.csv')
 data = geolocation.drop_duplicates(subset='customer_unique_id')
 
-for col in datetime_cols:
-    all_df[col] = pd.to_datetime(all_df[col])
+# for col in datetime_cols:
+#     all_df[col] = pd.to_datetime(all_df[col])
 
 min_date = all_df["order_approved_at"].min()
 max_date = all_df["order_approved_at"].max()
@@ -32,7 +32,7 @@ with st.sidebar:
     with col1:
         st.write(' ')
     with col2:
-        st.image('https://github.com/mykaharudin/proyek_dataAnalyst/raw/main/dashboard/df.csv', width=100)
+        st.image('https://github.com/mykaharudin/proyek_dataAnalyst/blob/main/dashboard/313.png', width=100)
     with col3:
         st.write(' ')
 
