@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
@@ -6,12 +7,16 @@ import streamlit as st
 import urllib
 from funcMain import AnalisisData, BrazilMapPlotter
 
+current_directory = os.getcwd()
+
 sns.set(style='dark')
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # Dataset
 datetime_cols = ["order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date", "order_estimated_delivery_date", "order_purchase_timestamp", "shipping_limit_date"]
-all_df = pd.read_csv(current_directory, 'dashboard', 'df.csv')
+# all_df = pd.read_csv(current_directory, 'dashboard', 'df.csv')
+file_path = os.path.join(current_directory, 'dashboard', 'df.csv')
+all_df = pd.read_csv(file_path)
 all_df.sort_values(by="order_approved_at", inplace=True)
 all_df.reset_index(inplace=True)
 
