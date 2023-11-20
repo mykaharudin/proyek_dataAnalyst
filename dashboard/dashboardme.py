@@ -32,7 +32,7 @@ with st.sidebar:
     with col1:
         st.write(' ')
     with col2:
-        st.image('https://github.com/mykaharudin/proyek_dataAnalyst/blob/main/dashboard/313.jpg', width=100)
+        st.image('https://github.com/mykaharudin/proyek_dataAnalyst/blob/main/dashboard/313.png', width=100)
     with col3:
         st.write(' ')
 
