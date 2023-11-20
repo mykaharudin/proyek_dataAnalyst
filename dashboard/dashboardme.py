@@ -20,7 +20,7 @@ datetime_cols = ["order_approved_at", "order_delivered_carrier_date", "order_del
 geolocation = pd.read_csv('https://github.com/mykaharudin/proyek_dataAnalyst/raw/main/dashboard/geolocation.csv')
 data = geolocation.drop_duplicates(subset='customer_unique_id')
 
-all_df['tanggal'] = pd.to_datetime(all_df['tanggal'], format='%d-%m-%Y')
+all_df = pd.to_datetime(all_df['tanggal'], format='%d-%m-%Y')
 
 min_date = all_df["order_approved_at"].min()
 max_date = all_df["order_approved_at"].max()
