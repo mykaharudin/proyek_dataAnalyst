@@ -23,8 +23,8 @@ data = geolocation.drop_duplicates(subset='customer_unique_id')
 # for col in datetime_cols:
 #     all_df[col] = pd.to_datetime(all_df[col])
 
-min_date = all_df["order_approved_at"].min()
-max_date = all_df["order_approved_at"].max()
+# min_date = all_df["order_approved_at"].min()
+# max_date = all_df["order_approved_at"].max()
 
 # Sidebar
 with st.sidebar:
