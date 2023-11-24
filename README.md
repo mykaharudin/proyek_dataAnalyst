@@ -3,7 +3,9 @@ Repositori yang berupa projek analis data ,yang dibuat dengan menggunakan **Stre
 **Python** <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Python-Dark.svg" alt="Python logo"></img>
 
 ## Deskripsi
-Proyek ini merupakan analisis data E-Commerce**E-Commerce Data Analysis**yang divisualisasikan melalui sebuah situs web di platform Kaggle. Tujuannya adalah memberikan wawasan dan pemahaman tentang informasi yang terdapat dalam data E-Commerce tersebut.
+Proyek ini merupakan analisis data yang berfokus pada data **E-Commerce Public Dataset** . Data ini akan diolah dan dianalisis untuk mendapatkan wawasan yang mendalam tentang operasi dan karakteristik dari aktivitas **E-Commerce Public Dataset** . Analisis ini dilakukan melalui platform Kaggle dan hasilnya akan divisualisasikan melalui sebuah situs web.
+
+Tujuan dari proyek ini adalah untuk memberikan pemahaman yang lebih dalam terkait informasi yang terdapat dalam data **E-Commerce Public Dataset** . Melalui analisis yang dilakukan, diharapkan dapat ditemukan pola-pola, tren, dan insight-insight yang berguna untuk memahami perilaku pelanggan, performa produk, serta faktor-faktor lain yang mempengaruhi kesuksesan atau tantangan dalam ranah bisnis **E-Commerce Public Dataset** . Hasil dari analisis ini kemudian akan dihadirkan secara visual melalui situs web, memudahkan pemahaman dan aksesibilitas terhadap wawasan yang diperoleh dari data.
 
 ## Sumber Data
 Kaggle Dataset Ecommerce [(Link Download)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
