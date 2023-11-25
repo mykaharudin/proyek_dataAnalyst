@@ -1,4 +1,4 @@
-class AnalisisData:
+class dataAnalysis:
     def __init__(self, df):
         self.df = df
 
@@ -57,7 +57,7 @@ class AnalisisData:
 
         return order_status_df, most_common_status
     
-class BrazilMapPlotter:
+class mapBrazil:
     def __init__(self, data, plt, mpimg, urllib, st):
         self.data = data
         self.plt = plt

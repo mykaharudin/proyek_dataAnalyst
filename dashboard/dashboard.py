@@ -4,20 +4,20 @@ import matplotlib.image as mpimg
 import seaborn as sns
 import streamlit as st
 import urllib
-from funcMain import AnalisisData, BrazilMapPlotter
+from funcMain import dataAnalysis, mapBrazil
 
 sns.set(style='dark')
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # Dataset
-all_df = pd.read_csv('https://github.com/mykaharudin/proyek_dataAnalyst/raw/main/dashboard/df.csv')
+all_df = pd.read_csv('/data/all_data.csv')
 all_df.sort_values(by="order_approved_at", inplace=True)
 all_df.reset_index(inplace=True)
 
 datetime_cols = ["order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date", "order_estimated_delivery_date", "order_purchase_timestamp", "shipping_limit_date"]
 
 # Geolocation Dataset
-geolocation = pd.read_csv('https://github.com/mykaharudin/proyek_dataAnalyst/raw/main/dashboard/geolocation.csv')
+geolocation = pd.read_csv('/data/geolocation.csv')
 data = geolocation.drop_duplicates(subset='customer_unique_id')
 
 for col in datetime_cols:
@@ -32,7 +32,7 @@ with st.sidebar:
     with col1:
         st.write(' ')
     with col2:
-        st.image('https://github.com/mykaharudin/proyek_dataAnalyst/blob/main/dashboard/313.png', width=100)
+        st.image('/dashboard/313.png', width=100)
     with col3:
         st.write(' ')
 
@@ -48,15 +48,15 @@ with st.sidebar:
 main_df = all_df[(all_df["order_approved_at"] >= str(start_date)) & 
                 (all_df["order_approved_at"] <= str(end_date))]
 
-function = AnalisisData(main_df)
-map_plot = BrazilMapPlotter(data, plt, mpimg, urllib, st)
+funt = dataAnalysis(main_df)
+map_plot = mapBrazil(data, plt, mpimg, urllib, st)
 
-daily_orders_df = function.create_daily_orders_df()
-sum_spend_df = function.create_sum_spend_df()
-sum_order_items_df = function.create_sum_order_items_df()
-review_score, common_score = function.review_score_df()
-state, most_common_state = function.create_bystate_df()
-order_status, common_status = function.create_order_status()
+daily_orders_df = funt.create_daily_orders_df()
+sum_spend_df = funt.create_sum_spend_df()
+sum_order_items_df = funt.create_sum_order_items_df()
+review_score, common_score = funt.review_score_df()
+state, most_common_state = funt.create_bystate_df()
+order_status, common_status = funt.create_order_status()
 
 # Define your Streamlit app
 st.title("E-Commerce Public Data Analysis")
