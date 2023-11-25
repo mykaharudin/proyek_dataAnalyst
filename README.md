@@ -34,7 +34,6 @@ Kaggle Dataset Ecommerce [(Link Download)](https://www.kaggle.com/datasets/olist
     scipy
     streamlit
     seaborn
-    urllib
     
 
 ## Penggunaan
