@@ -26,7 +26,7 @@ Kaggle Dataset Ecommerce [(Link Download)](https://www.kaggle.com/datasets/olist
    
 2. Lakukan Instalasi Library Dengan Perintah Berikut:
 
-    ```shell
+    ># shell
     pip install 
     numpy
     pandas
@@ -34,7 +34,8 @@ Kaggle Dataset Ecommerce [(Link Download)](https://www.kaggle.com/datasets/olist
     scipy
     streamlit
     seaborn
-    ```
+    urllib
+    
 
 ## Penggunaan
 1. Melakukan Akses dan Kompilasi(Local):
