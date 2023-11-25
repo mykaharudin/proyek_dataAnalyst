@@ -10,14 +10,14 @@ sns.set(style='dark')
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # Dataset
-all_df = pd.read_csv('/data/all_data.csv')
+all_df = pd.read_csv('https://github.com/mykaharudin/proyek_dataAnalyst/blob/main/data/all_data.csv')
 all_df.sort_values(by="order_approved_at", inplace=True)
 all_df.reset_index(inplace=True)
 
 datetime_cols = ["order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date", "order_estimated_delivery_date", "order_purchase_timestamp", "shipping_limit_date"]
 
 # Geolocation Dataset
-geolocation = pd.read_csv('/data/geolocation.csv')
+geolocation = pd.read_csv('https://github.com/mykaharudin/proyek_dataAnalyst/blob/main/data/geolocation.csv')
 data = geolocation.drop_duplicates(subset='customer_unique_id')
 
 for col in datetime_cols:
@@ -32,7 +32,7 @@ with st.sidebar:
     with col1:
         st.write(' ')
     with col2:
-        st.image('/dashboard/313.png', width=100)
+        st.image('https://github.com/mykaharudin/proyek_dataAnalyst/blob/main/dashboard/313.png', width=100)
     with col3:
         st.write(' ')
 
