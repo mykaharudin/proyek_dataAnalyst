@@ -1,6 +1,6 @@
 ## Project Data Analytics
-Repositori yang berupa projek analis data ,yang dibuat dengan menggunakan **Streamlit** <img src="https://user-images.githubusercontent.com/7164864/217935870-c0bc60a3-6fc0-4047-b011-7b4c59488c91.png" alt="Streamlit logo"></img><br>
-**Python** <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Python-Dark.svg" alt="Python logo"></img>
+Repositori yang berupa projek analis data ,yang dibuat dengan menggunakan **Streamlit** <img src="https://user-images.githubusercontent.com/7164864/217935870-c0bc60a3-6fc0-4047-b011-7b4c59488c91.png" alt="Streamlit logo"></img><br><br>
+**Python** <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Python-Dark.svg" alt="Python logo" height="40"></img>
 
 ## Deskripsi
 Proyek ini merupakan analisis data yang berfokus pada data **E-Commerce Public Dataset** . Data ini akan diolah dan dianalisis untuk mendapatkan wawasan yang mendalam tentang operasi dan karakteristik dari aktivitas **E-Commerce Public Dataset** . Analisis ini dilakukan melalui platform Kaggle dan hasilnya akan divisualisasikan melalui sebuah situs web.
@@ -41,7 +41,8 @@ Kaggle Dataset Ecommerce [(Link Download)](https://www.kaggle.com/datasets/olist
 
     ```shell
     cd proyek_dataAnalyst
-    streamlit run dashboard/dashboardme.py
+    cd dashboard
+    streamlit run dashboard.py
     ```
 2. Melakukan Akses secara Cloud (online):
-   [Project Data Analytics](https://proyekdataanalyst-mayuka.streamlit.app/)
+   silakan klik [Project Data Analytics](https://proyekdataanalyst-mayuka.streamlit.app/)
