@@ -3,14 +3,14 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import seaborn as sns
 import streamlit as st
-import urllib
 from funcMain import dataAnalysis
 
 sns.set(style='dark')
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # Dataset
-all_df = pd.read_csv('all_data.csv')
+filepathdata='data/all_data.csv'
+all_df = pd.read_csv(filepathdata)
 all_df.sort_values(by="order_approved_at", inplace=True)
 all_df.reset_index(inplace=True)
 
