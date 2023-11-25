@@ -4,7 +4,7 @@ import matplotlib.image as mpimg
 import seaborn as sns
 import streamlit as st
 import urllib
-from funcMain import dataAnalysis, mapBrazil
+from funcMain import dataAnalysis
 
 sns.set(style='dark')
 st.set_option('deprecation.showPyplotGlobalUse', False)
@@ -49,7 +49,6 @@ main_df = all_df[(all_df["order_approved_at"] >= str(start_date)) &
                 (all_df["order_approved_at"] <= str(end_date))]
 
 funt = dataAnalysis(main_df)
-map_plot = mapBrazil(data, plt, mpimg, urllib, st)
 
 daily_orders_df = funt.create_daily_orders_df()
 sum_spend_df = funt.create_sum_spend_df()
@@ -60,9 +59,6 @@ order_status, common_status = funt.create_order_status()
 
 # Define your Streamlit app
 st.title("E-Commerce Public Data Analysis")
-
-# Add text or descriptions
-st.write("**This is a dashboard for analyzing E-Commerce public data.**")
 
 # Daily Orders Delivered
 st.subheader("Daily Orders Delivered")
@@ -181,26 +177,26 @@ st.pyplot(fig)
 
 # Customer Demographic
 st.subheader("Customer Demographic")
-tab1, tab2 = st.tabs(["State", "Geolocation"])
 
-with tab1:
+# Dropdown untuk memilih konten yang ditampilkan
+option = st.selectbox("Select Demographic", ["State"])
+
+if option == "State":
     most_common_state = state.customer_state.value_counts().index[0]
     st.markdown(f"Most Common State: **{most_common_state}**")
 
     fig, ax = plt.subplots(figsize=(12, 6))
-    sns.barplot(x=state.customer_state.value_counts().index,
-                y=state.customer_count.values, 
-                data=state,
-                palette="viridis"
-                    )
+    sns.barplot(
+        x=state.customer_state.value_counts().index,
+        y=state.customer_count.values,
+        data=state,
+        palette="viridis"
+    )
 
     plt.title("Number customers from State", fontsize=15)
     plt.xlabel("State")
     plt.ylabel("Number of Customers")
     plt.xticks(fontsize=12)
     st.pyplot(fig)
-
-with tab2:
-    map_plot.plot()
     
 st.caption('Copyright(C) Mayuka 2023')
